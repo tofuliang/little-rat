@@ -21,7 +21,7 @@ jobs:
           DIST=build/chrome
           rm -rf $DIST
           mkdir -p $DIST
-          mkdir dist
+          [ ! -d dist] && mkdir dist
           cp -r src $DIST/src
           mkdir -p $DIST/assets
           cp assets/little-rat-* $DIST/assets
